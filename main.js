@@ -37,6 +37,7 @@ function errorMsg(msg, error) {
 }
 
 async function init(e) {
+  new window.VConsole();
   try {
     const stream = await navigator.mediaDevices.getUserMedia(constraints);
     handleSuccess(stream);
