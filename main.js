@@ -58,3 +58,13 @@ async function takeSnapshot(e) {
 
 document.querySelector('#open-camera-button').addEventListener('click', e => init(e));
 document.querySelector('#snapshot-button').addEventListener('click', e => takeSnapshot(e));
+
+window.onload = function () {
+  console.log('window.onload')
+  new window.VConsole();
+  document.addEventListener("WeixinJSBridgeReady", function () {
+    console.log('WeixinJSBridgeReady')
+    var video = document.querySelector('video')
+    video.play();
+  }, false);
+}
